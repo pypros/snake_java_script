@@ -37,17 +37,4 @@ export default class BoardGameConsole {
     const [x, y, representation] = pixel;
     this.boardGame[x][y] = representation;
   }
-
-  drawPixels(pixels) {
-    pixels.forEach((pixel) => this.drawPixel(pixel));
-  }
-
-  movePixel(currentPixel, nextPixel) {
-    const [cx, cy] = currentPixel;
-    const [nx, ny] = nextPixel;
-    const currentPixelRepresentation = this.boardGame[cx][cy];
-    const nextPixelRepresentation = this.boardGame[nx][ny];
-    this.boardGame[cx][cy] = nextPixelRepresentation;
-    this.boardGame[nx][ny] = currentPixelRepresentation;
-  }
 }
